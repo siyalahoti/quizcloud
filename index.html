@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101426">
+  <title>QuizNova — Think Beyond</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="QuizNova home">
+      <span class="brand-mark">Q<span>N</span></span>
+      <span>quiz<span class="brand-light">nova</span><small>THINK BEYOND</small></span>
+    </a>
+    <div class="top-actions">
+      <span class="live-dot"></span><span class="top-label">YOUR DAILY BRAIN BOOST</span>
+      <button class="icon-button" id="sound-toggle" aria-label="Toggle sound" title="Toggle sound">♫</button>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <section class="welcome-panel" id="welcome-screen">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> THE SMARTER WAY TO LEARN</div>
+        <h1>Make every<br>answer <span class="gradient-text">count.</span></h1>
+        <p class="hero-description">Challenge your thinking, build your streak, and turn what you know into something extraordinary.</p>
+        <div class="hero-stats">
+          <div><strong>10</strong><span>Questions</span></div>
+          <i></i>
+          <div><strong>∞</strong><span>Possibilities</span></div>
+          <i></i>
+          <div><strong>1</strong><span>Big brain</span></div>
+        </div>
+      </div>
+
+      <div class="launch-card">
+        <div class="card-topline"><span>READY WHEN YOU ARE</span><span class="sparkle">✳</span></div>
+        <h2>Choose your challenge</h2>
+        <p class="muted">Pick a track and see what you know.</p>
+
+        <div class="category-grid" role="group" aria-label="Choose quiz category">
+          <button class="category active" data-category="tech">
+            <span class="category-icon icon-purple">⌘</span><span><b>Tech & CS</b><small>Web, cloud, computing</small></span><span class="category-check">✓</span>
+          </button>
+          <button class="category" data-category="science">
+            <span class="category-icon icon-teal">✳</span><span><b>Science</b><small>Discover how it works</small></span><span class="category-check">✓</span>
+          </button>
+          <button class="category" data-category="mixed">
+            <span class="category-icon icon-orange">◈</span><span><b>Mixed bag</b><small>A little bit of everything</small></span><span class="category-check">✓</span>
+          </button>
+        </div>
+
+        <div class="settings-row">
+          <label for="difficulty">DIFFICULTY</label>
+          <div class="difficulty-options" id="difficulty-options">
+            <button data-level="easy">Easy</button>
+            <button class="selected" data-level="medium">Medium</button>
+            <button data-level="hard">Hard</button>
+          </div>
+        </div>
+        <div class="settings-row timer-row">
+          <label for="timer-toggle">QUESTION TIMER</label>
+          <button class="toggle-switch" id="timer-toggle" aria-pressed="true"><span></span><b>15 sec</b></button>
+        </div>
+        <button class="primary-button" id="start-btn">Start challenge <span>↗</span></button>
+        <div class="secure-note"><span>✦</span> No sign-up. Just you and your brain.</div>
+      </div>
+    </section>
+
+    <section class="quiz-layout hidden" id="quiz-screen">
+      <div class="quiz-main">
+        <div class="quiz-heading">
+          <div class="quiz-header-left">
+            <button class="back-button" id="exit-btn">← <span>Exit quiz</span></button>
+            <button class="home-button" id="quiz-home-btn" title="Return to home">⌂ <span>Home</span></button>
+          </div>
+          <div class="quiz-pill"><span class="live-dot"></span><span id="category-label">TECH & CS</span></div>
+        </div>
+        <div class="question-meta">
+          <span id="question-number">QUESTION 01 <span>/ 10</span></span>
+          <span class="points-label">+100 XP <span>PER CORRECT ANSWER</span></span>
+        </div>
+        <div class="main-progress"><div id="main-progress-fill"></div></div>
+        <div class="timer-wrap" id="timer-wrap">
+          <div class="timer-icon">◷</div><span>TIME LEFT</span><strong id="timer-number">15</strong><div class="timer-track"><div id="timer-fill"></div></div>
+        </div>
+        <h2 class="question-title" id="question-text">Loading your question...</h2>
+        <p class="select-hint">SELECT ONE ANSWER</p>
+        <div class="answer-list" id="answer-list"></div>
+        <div class="answer-feedback" id="answer-feedback" aria-live="polite"></div>
+        <div class="quiz-footer">
+          <div class="streak-chip">🔥 <span id="streak-count">0</span> <small>STREAK</small></div>
+          <button class="primary-button next-button" id="next-btn" disabled>Lock it in <span>→</span></button>
+        </div>
+      </div>
+      <aside class="quiz-side">
+        <div class="side-card focus-card">
+          <div class="orbit-art"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit-core">✦</div><span class="orbit-star star-a">✦</span><span class="orbit-star star-b">✧</span></div>
+          <span class="side-kicker">YOUR MISSION</span>
+          <h3>Stay curious.<br>Stay sharp.</h3>
+          <p>Every question is a chance to level up. Trust your thinking.</p>
+        </div>
+        <div class="side-card stats-card">
+          <div class="side-card-title">SESSION STATS <span>↗</span></div>
+          <div class="stat-line"><span>Correct answers</span><b id="correct-count">0</b></div>
+          <div class="stat-line"><span>Accuracy</span><b id="accuracy-count">—</b></div>
+          <div class="stat-line"><span>XP earned</span><b id="xp-count">0</b></div>
+        </div>
+        <div class="tip-card"><span>✦ QUICK TIP</span><p id="tip-text">Read every option before you lock in your answer.</p></div>
+      </aside>
+    </section>
+
+    <section class="result-layout hidden" id="result-screen">
+      <div class="result-confetti" aria-hidden="true">✦　✧　✦　✧　✦</div>
+      <div class="result-badge" id="result-emoji">🏆</div>
+      <div class="eyebrow centered"><span class="eyebrow-line"></span> CHALLENGE COMPLETE <span class="eyebrow-line"></span></div>
+      <h1 id="result-title">That was <span class="gradient-text">brilliant.</span></h1>
+      <p class="result-subtitle" id="result-subtitle">Here's how your brain showed up today.</p>
+      <div class="result-score-card">
+        <div class="score-main"><span>YOUR SCORE</span><strong id="final-score">0<span>/10</span></strong><small id="final-percent">0% accuracy</small></div>
+        <div class="score-divider"></div>
+        <div class="score-mini"><span>⚡</span><strong id="final-xp">0 XP</strong><small>Experience earned</small></div>
+        <div class="score-mini"><span>🔥</span><strong id="final-streak">0</strong><small>Best streak</small></div>
+      </div>
+      <div class="result-message" id="result-message"></div>
+      <div class="result-actions">
+        <button class="primary-button" id="play-again-btn">Play again <span>↻</span></button>
+        <button class="secondary-button" id="review-btn">Review answers <span>↓</span></button>
+        <button class="secondary-button home-result-button" id="result-home-btn">⌂ Home</button>
+      </div>
+      <div class="review-panel hidden" id="review-panel"></div>
+    </section>
+  </main>
+
+  <footer class="page-footer"><span>QUIZNOVA © 2026</span><span>BUILT TO MAKE LEARNING FEEL LIKE A WIN.</span><span> BCC MINI PROJECT <span class="footer-dot">●</span></span></footer>
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>
