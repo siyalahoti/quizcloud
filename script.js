@@ -62,7 +62,113 @@ const questionBank = {
       q("Which quantity is measured in watts?", ["Force", "Power", "Pressure", "Electric charge"], 1, "A watt is the SI unit of power."),
       q("What does a catalyst do in a chemical reaction?", ["Always raises product energy", "Lowers activation energy pathway", "Gets consumed completely", "Changes equilibrium constant"], 1, "A catalyst provides a pathway with lower activation energy and is regenerated.")
     ]
+  },
+
+  math: {
+    easy: [
+      q("What is 12 × 8?", ["86", "96", "108", "88"], 1, "12 multiplied by 8 equals 96."),
+      q("What is 25% of 200?", ["25", "40", "50", "75"], 2, "One quarter of 200 is 50."),
+      q("How many sides does a hexagon have?", ["5", "6", "7", "8"], 1, "A hexagon has six sides."),
+      q("What is the value of 9²?", ["18", "72", "81", "99"], 2, "9 squared means 9 × 9 = 81."),
+      q("Which is an even number?", ["17", "23", "31", "42"], 3, "42 is divisible by 2."),
+      q("What is 144 ÷ 12?", ["10", "11", "12", "14"], 2, "144 divided by 12 equals 12.")
+    ],
+    medium: [
+      q("Solve: 3x + 5 = 20.", ["x = 3", "x = 5", "x = 7", "x = 15"], 1, "Subtract 5, then divide 15 by 3; x = 5."),
+      q("What is the area of a triangle with base 10 cm and height 6 cm?", ["16 cm²", "30 cm²", "60 cm²", "32 cm²"], 1, "Area = ½ × base × height = 30 cm²."),
+      q("What is the mean of 4, 6, 8 and 10?", ["6", "7", "8", "9"], 1, "Their sum is 28; 28 ÷ 4 = 7."),
+      q("What is √169?", ["11", "12", "13", "14"], 2, "13 × 13 = 169."),
+      q("A fair die is rolled. What is the probability of getting a 6?", ["1/2", "1/3", "1/6", "1/12"], 2, "One of six equally likely outcomes is a 6."),
+      q("What is the slope between (0, 1) and (2, 5)?", ["1", "2", "3", "4"], 1, "Slope = (5 − 1) ÷ (2 − 0) = 2.")
+    ],
+    hard: [
+      q("What is the derivative of x² with respect to x?", ["x", "2x", "x²", "2"], 1, "By the power rule, d(x²)/dx = 2x."),
+      q("What is the determinant of [[2, 1], [3, 4]]?", ["5", "8", "11", "−5"], 0, "The determinant is (2 × 4) − (1 × 3) = 5."),
+      q("If log₁₀( x ) = 2, what is x?", ["10", "20", "100", "1000"], 2, "A base-10 logarithm of 2 means 10² = 100."),
+      q("What is the sum of the first 10 positive integers?", ["45", "50", "55", "100"], 2, "The sum is n(n + 1)/2 = 10 × 11 / 2 = 55."),
+      q("For a quadratic ax² + bx + c, what is the discriminant?", ["b² − 4ac", "b² + 4ac", "a² − 4bc", "4ac − b"], 0, "The discriminant is b² − 4ac."),
+      q("What is the integral of 2x with respect to x?", ["x + C", "x² + C", "2x² + C", "2 + C"], 1, "The antiderivative of 2x is x² + C.")
+    ]
+  },
+  geography: {
+    easy: [
+      q("What is the capital of Japan?", ["Seoul", "Tokyo", "Beijing", "Bangkok"], 1, "Tokyo is the capital of Japan."),
+      q("Which is the largest ocean on Earth?", ["Atlantic", "Indian", "Arctic", "Pacific"], 3, "The Pacific Ocean is the largest."),
+      q("On which continent is Egypt mostly located?", ["Asia", "Africa", "Europe", "South America"], 1, "Most of Egypt lies in northeastern Africa."),
+      q("Which river flows through London?", ["Seine", "Thames", "Danube", "Rhine"], 1, "The River Thames flows through London."),
+      q("What is the capital of India?", ["Mumbai", "New Delhi", "Kolkata", "Jaipur"], 1, "New Delhi is India's capital."),
+      q("Which country is famous for the city of Rio de Janeiro?", ["Brazil", "Spain", "Mexico", "Portugal"], 0, "Rio de Janeiro is a major city in Brazil.")
+    ],
+    medium: [
+      q("Which mountain range traditionally separates Europe and Asia?", ["Andes", "Alps", "Ural Mountains", "Himalayas"], 2, "The Ural Mountains are a conventional boundary between Europe and Asia."),
+      q("Which country has the most natural lakes?", ["Canada", "Australia", "Egypt", "Japan"], 0, "Canada has a very large number of natural lakes."),
+      q("The Equator passes through which continent?", ["Europe", "Antarctica", "South America", "Australia only"], 2, "The Equator crosses northern South America."),
+      q("Which Indian state is known as the Land of Five Rivers historically?", ["Punjab", "Kerala", "Assam", "Goa"], 0, "Punjab's name is associated with five rivers."),
+      q("What is the world's largest hot desert?", ["Gobi", "Sahara", "Thar", "Kalahari"], 1, "The Sahara is the largest hot desert."),
+      q("Which line is at 0° longitude?", ["Equator", "Tropic of Cancer", "Prime Meridian", "International Date Line"], 2, "The Prime Meridian defines 0° longitude.")
+    ],
+    hard: [
+      q("Which strait connects the Persian Gulf with the Gulf of Oman?", ["Malacca Strait", "Strait of Hormuz", "Bering Strait", "Gibraltar Strait"], 1, "The Strait of Hormuz is the narrow exit from the Persian Gulf."),
+      q("Which is the deepest known oceanic trench?", ["Java Trench", "Puerto Rico Trench", "Mariana Trench", "Tonga Trench"], 2, "The Mariana Trench contains the deepest known point in the ocean."),
+      q("Which African country was formerly known as Abyssinia?", ["Ethiopia", "Ghana", "Namibia", "Tunisia"], 0, "Abyssinia is a historical name for Ethiopia."),
+      q("Which river carries the greatest average discharge?", ["Nile", "Amazon", "Danube", "Mekong"], 1, "The Amazon has the greatest average river discharge."),
+      q("Which sea has no land coastline and is defined by ocean currents?", ["Baltic Sea", "Sargasso Sea", "Red Sea", "Black Sea"], 1, "The Sargasso Sea is bounded by currents in the North Atlantic."),
+      q("Which country contains the region of Transylvania?", ["Romania", "Poland", "Greece", "Belgium"], 0, "Transylvania is a historical region of Romania.")
+    ]
+  },
+  history: {
+    easy: [
+      q("Who was the first Prime Minister of independent India?", ["Mahatma Gandhi", "Jawaharlal Nehru", "Sardar Patel", "Rajendra Prasad"], 1, "Jawaharlal Nehru became India's first Prime Minister in 1947."),
+      q("The Taj Mahal was built by which Mughal emperor?", ["Akbar", "Babur", "Shah Jahan", "Aurangzeb"], 2, "Shah Jahan commissioned the Taj Mahal."),
+      q("In which year did World War II end?", ["1918", "1939", "1945", "1950"], 2, "World War II ended in 1945."),
+      q("Which ancient civilization built the pyramids at Giza?", ["Roman", "Egyptian", "Mayan", "Indus Valley"], 1, "The pyramids at Giza were built in ancient Egypt."),
+      q("Who is widely associated with India's non-violent independence movement?", ["Mahatma Gandhi", "Subhas Chandra Bose", "Bhagat Singh", "Ashoka"], 0, "Mahatma Gandhi became a leading figure in non-violent resistance."),
+      q("The Olympic Games originated in ancient which country?", ["Italy", "Greece", "China", "Egypt"], 1, "The ancient Olympic Games began in Greece.")
+    ],
+    medium: [
+      q("In which year did the French Revolution begin?", ["1776", "1789", "1815", "1848"], 1, "The French Revolution began in 1789."),
+      q("Who was the first emperor of the Maurya Empire?", ["Ashoka", "Chandragupta Maurya", "Harsha", "Kanishka"], 1, "Chandragupta Maurya founded the Maurya Empire."),
+      q("Which document was adopted in the United States in 1776?", ["Magna Carta", "Declaration of Independence", "Bill of Rights", "Constitution"], 1, "The Declaration of Independence was adopted in 1776."),
+      q("Who led the Salt March in 1930?", ["Jawaharlal Nehru", "Mahatma Gandhi", "B. R. Ambedkar", "Bal Gangadhar Tilak"], 1, "Gandhi led the Salt March to protest the British salt tax."),
+      q("Which civilization developed cuneiform writing?", ["Sumerians", "Vikings", "Aztecs", "Incas"], 0, "Cuneiform was developed by the Sumerians in Mesopotamia."),
+      q("The Renaissance began in which European country?", ["Italy", "Norway", "Russia", "Ireland"], 0, "The Renaissance began in Italy before spreading through Europe.")
+    ],
+    hard: [
+      q("Which 1648 settlement is associated with the modern state-sovereignty principle in Europe?", ["Treaty of Versailles", "Peace of Westphalia", "Congress of Vienna", "Treaty of Utrecht"], 1, "The Peace of Westphalia ended the Thirty Years' War in 1648."),
+      q("Who was the founder of the Mughal Empire in India?", ["Akbar", "Babur", "Humayun", "Sher Shah Suri"], 1, "Babur established Mughal rule after the First Battle of Panipat in 1526."),
+      q("Which empire built the road network known as the Royal Road in ancient Persia?", ["Achaemenid Persian Empire", "Ottoman Empire", "Mali Empire", "Byzantine Empire"], 0, "The Achaemenid rulers developed the Royal Road across their empire."),
+      q("The Meiji Restoration began in which year?", ["1603", "1750", "1868", "1912"], 2, "The Meiji Restoration began in 1868 and transformed Japan's government."),
+      q("Which treaty formally ended the state of war between Germany and the Allied Powers after World War I?", ["Treaty of Versailles", "Treaty of Tordesillas", "Treaty of Paris 1763", "Treaty of Ghent"], 0, "The Treaty of Versailles was signed in 1919."),
+      q("Which ancient Indian text is traditionally attributed to Kautilya?", ["Arthashastra", "Rajatarangini", "Indica", "Mudrarakshasa"], 0, "The Arthashastra is traditionally attributed to Kautilya, also called Chanakya.")
+    ]
+  },
+  sports: {
+    easy: [
+      q("How many players from one team are on the field in a standard football (soccer) match?", ["9", "10", "11", "12"], 2, "A football team fields 11 players, including the goalkeeper."),
+      q("In cricket, how many runs is a boundary worth if the ball crosses the rope after bouncing?", ["2", "3", "4", "6"], 2, "A ball reaching the boundary after bouncing scores four runs."),
+      q("Which sport uses a shuttlecock?", ["Tennis", "Badminton", "Squash", "Table tennis"], 1, "Badminton is played with a shuttlecock."),
+      q("How many rings are on the Olympic symbol?", ["4", "5", "6", "7"], 1, "The Olympic symbol contains five interlaced rings."),
+      q("Which sport is played at Wimbledon?", ["Golf", "Tennis", "Rugby", "Hockey"], 1, "Wimbledon is a major tennis tournament."),
+      q("In basketball, how many points is a free throw worth?", ["1", "2", "3", "4"], 0, "A successful free throw is worth one point.")
+    ],
+    medium: [
+      q("How many legal balls are in a standard over in cricket?", ["4", "5", "6", "8"], 2, "A standard over consists of six legal deliveries."),
+      q("What is the maximum score with one dart in a standard darts board?", ["20", "50", "60", "100"], 2, "Triple 20 scores 60 points with one dart."),
+      q("In tennis, what score comes after deuce when a player wins the next point?", ["Game", "Advantage", "Set", "Love"], 1, "Winning a point at deuce gives that player advantage."),
+      q("How long is a standard Olympic swimming pool?", ["25 metres", "50 metres", "75 metres", "100 metres"], 1, "An Olympic-size pool is 50 metres long."),
+      q("Which chess piece moves in an L-shape?", ["Bishop", "Rook", "Knight", "Queen"], 2, "The knight moves two squares in one direction and one perpendicular."),
+      q("In volleyball, how many players per team are on court in indoor play?", ["5", "6", "7", "8"], 1, "Indoor volleyball teams have six players on court.")
+    ],
+    hard: [
+      q("In Formula One, what does a blue flag usually indicate to a driver being lapped?", ["Pit immediately", "A faster car is approaching to pass", "The race is stopped", "The driver has won"], 1, "A blue flag warns that a faster car is about to lap or pass."),
+      q("Which country won the first men's FIFA World Cup in 1930?", ["Brazil", "Italy", "Uruguay", "Argentina"], 2, "Uruguay hosted and won the inaugural tournament."),
+      q("In baseball, how many strikes normally make a batter out?", ["Two", "Three", "Four", "Five"], 1, "A batter is normally out after three strikes."),
+      q("Which Grand Slam tennis tournament is played on clay courts?", ["Australian Open", "Wimbledon", "US Open", "French Open"], 3, "The French Open is played on clay courts."),
+      q("In rugby union, how many points is a try worth under current standard scoring?", ["3", "5", "6", "7"], 1, "A try is worth five points; a conversion is separate."),
+      q("What is the standard marathon distance?", ["40 km", "42.195 km", "45 km", "50 km"], 1, "The official marathon distance is 42.195 kilometres.")
+    ]
   }
+
 };
 
 function q(question, options, answer, explanation) {
@@ -157,12 +263,9 @@ function startQuiz() {
   welcomeScreen.classList.add("hidden");
   resultScreen.classList.add("hidden");
   quizScreen.classList.remove("hidden");
-  $("category-label").textContent = state.category === "tech" ? "TECH & CS" : state.category === "science" ? "SCIENCE" : "MIXED BAG";
+  $("category-label").textContent = state.category === "tech" ? "TECH & CS" : state.category === "science" ? "SCIENCE" : state.category === "math" ? "MATH & LOGIC" : state.category === "geography" ? "GEOGRAPHY" : state.category === "history" ? "HISTORY" : state.category === "sports" ? "SPORTS";
   if (state.category === "mixed") {
-    state.questions = shuffle([
-      ...questionBank.tech[state.difficulty],
-      ...questionBank.science[state.difficulty]
-    ]).slice(0, 10);
+    state.questions = shuffle(Object.keys(questionBank).filter(key => key !== "mixed").flatMap(key => questionBank[key][state.difficulty])).slice(0, 10);
   }
   renderQuestion();
 }
@@ -283,7 +386,7 @@ function showResults() {
     : percentage >= 50
       ? 'You are <span class="gradient-text">getting there.</span>'
       : 'Every expert <span class="gradient-text">starts here.</span>';
-  $("result-subtitle").textContent = `You completed the ${state.difficulty} ${state.category === "tech" ? "Tech & CS" : state.category === "science" ? "Science" : "Mixed Bag"} challenge.`;
+  $("result-subtitle").textContent = `You completed the ${state.difficulty} ${state.category === "tech" ? "Tech & CS" : state.category === "science" ? "Science" : state.category === "math" ? "Math & Logic" : state.category === "geography" ? "Geography" : state.category === "history" ? "History" : state.category === "sports" ? "Sports" : "Mixed Bag"} challenge.`;
   $("result-message").textContent = percentage >= 80
     ? "Strong work. Keep your momentum going and try a tougher challenge next."
     : percentage >= 50
