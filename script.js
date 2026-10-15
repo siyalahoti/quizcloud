@@ -62,8 +62,7 @@ const questionBank = {
       q("Which quantity is measured in watts?", ["Force", "Power", "Pressure", "Electric charge"], 1, "A watt is the SI unit of power."),
       q("What does a catalyst do in a chemical reaction?", ["Always raises product energy", "Lowers activation energy pathway", "Gets consumed completely", "Changes equilibrium constant"], 1, "A catalyst provides a pathway with lower activation energy and is regenerated.")
     ]
-  }
-  
+  },
   math: {
     easy: [
       q("What is 12 × 8?", ["86", "96", "108", "88"], 1, "12 × 8 = 96."),
